@@ -1,0 +1,7 @@
+# Nothing is built, so there is little to ignore. Kept short on purpose.
+.DS_Store
+Thumbs.db
+*.log
+
+# Local-only overrides, if you ever add a config.local.js
+src/config.local.js

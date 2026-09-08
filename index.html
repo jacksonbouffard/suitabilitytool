@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Township Land Suitability</title>
+
+    <!--
+      One tag. As of version 5.0 this serves the core API, the map components,
+      and Calcite components together, on coordinated version numbers.
+      https://js.arcgis.com/5.1/
+    -->
+    <script type="module" src="https://js.arcgis.com/5.1/"></script>
+
+    <link rel="stylesheet" href="./styles/app.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+
+  <body>
+    <calcite-shell>
+      <calcite-navigation slot="header">
+        <calcite-navigation-logo
+          slot="logo"
+          heading="Land Suitability"
+          description="Centre Region Township"
+        ></calcite-navigation-logo>
+        <calcite-button
+          id="account"
+          slot="content-end"
+          appearance="transparent"
+          kind="neutral"
+          >Sign in</calcite-button
+        >
+      </calcite-navigation>
+
+      <calcite-shell-panel slot="panel-start" display-mode="dock" width="m">
+        <calcite-panel heading="Criteria">
+          <calcite-notice id="notice" kind="danger" icon closable>
+            <div slot="message" id="notice-message"></div>
+          </calcite-notice>
+
+          <calcite-block
+            heading="Factors"
+            description="Relative influence on the composite."
+            open
+          >
+            <div id="factors"></div>
+          </calcite-block>
+
+          <calcite-block
+            heading="Constraints"
+            description="Excluded outright when on."
+            open
+          >
+            <div id="constraints"></div>
+          </calcite-block>
+
+          <calcite-button
+            id="reset"
+            slot="footer"
+            width="full"
+            appearance="outline"
+            >Reset to defaults</calcite-button
+          >
+        </calcite-panel>
+      </calcite-shell-panel>
+
+      <calcite-scrim id="loader" loading></calcite-scrim>
+      <arcgis-map>
+        <arcgis-zoom slot="top-left"></arcgis-zoom>
+        <arcgis-legend slot="bottom-left"></arcgis-legend>
+      </arcgis-map>
+    </calcite-shell>
+  </body>
+</html>
