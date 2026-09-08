@@ -10,10 +10,10 @@
 export const PORTAL_URL = 'https://www.arcgis.com'
 
 /** OAuth client ID from the AGOL developer credential. Fill in after item 2. */
-export const APP_ID = 'REPLACE_WITH_OAUTH_CLIENT_ID'
+export const APP_ID = 'pHi2gvPG0YZPvmxf'
 
 /** Portal item ID of the Web Map authored in AGOL (item 3). */
-export const WEBMAP_ITEM_ID = 'REPLACE_WITH_WEBMAP_ITEM_ID'
+export const WEBMAP_ITEM_ID = '0c9bee0ebbcc4100acabb2a995dd6bba'
 
 // ── Criteria ────────────────────────────────────────────────────────────────
 // `layerTitle` must match the layer title in the Web Map exactly, including
